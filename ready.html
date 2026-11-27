@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day One Ready</title>
+<meta name="description" content="Free alerts the minute GTA VI hits PC and Online, plus exactly what your console or PC needs to be ready. From Vice City Daily.">
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="style.css">
+<style>
+  .hero-sub { max-width: 560px; margin: 8px auto 0; }
+  .by { font-size: .9rem; margin-top: 6px; }
+  form.signup { display: grid; gap: 12px; }
+  form.signup label { display: grid; gap: 4px; font-weight: 600; font-size: .95rem; }
+  form.signup input[type=email], form.signup input[type=text], form.signup select {
+    width: 100%; padding: 12px; font-size: 1rem; border-radius: 8px;
+    border: 1px solid #4a3a7a; background: #0d0620; color: var(--text);
+  }
+  form.signup .check { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; }
+  form.signup .check input { margin-top: 5px; width: 18px; height: 18px; flex: none; }
+  form.signup button { width: 100%; padding: 14px; font-weight: 700; }
+  .fine { color: var(--muted); font-size: .85rem; margin: 0; }
+  .status { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  .status td { padding: 10px 8px; border-top: 1px solid #2c1d55; vertical-align: top; }
+  .status td:first-child { font-weight: 600; width: 34%; }
+  .tag { display: inline-block; font-size: .75rem; font-weight: 700; padding: 1px 8px; border-radius: 99px; margin-right: 6px; }
+  .tag.yes { background: #003d44; color: var(--cyan); }
+  .tag.no { background: #3d0a24; color: #ff8fbf; }
+  .tag.rep { background: #3a2f00; color: #ffd54a; }
+  ol li, ul li { margin: 6px 0; }
+  .picks { display: grid; gap: 12px; }
+  .pick { background: #0d0620; border: 1px solid #2c1d55; border-radius: 10px; padding: 12px 14px; }
+  .pick a { font-weight: 700; }
+  .msg { padding: 10px 12px; border-radius: 8px; background: #3a2f00; color: #ffd54a; }
+  details { background: var(--panel); border-radius: 10px; padding: 12px 16px; margin: 10px 0; }
+  summary { cursor: pointer; font-weight: 600; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<header>
+  <img src="logo.png" alt="Vice City Daily logo">
+  <h1><span class="a">Day One</span> <span class="b">Ready</span></h1>
+  <p class="hero-sub">Get pinged the minute GTA VI hits PC and Online, plus exactly what your setup needs to be ready.</p>
+  <p class="by">From the team behind <a href="index.html">Vice City Daily</a> &middot; Free &middot; No spam</p>
+</header>
+<main>
+
+  <div class="card" id="join">
+    <h2 style="margin-top:4px">Get the launch alert</h2>
+    <form class="signup" id="signup" method="post" target="_blank">
+      <label>Email
+        <input type="email" id="f-email" required autocomplete="email" placeholder="you@example.com">
+      </label>
+      <label>What do you play on?
+        <select id="f-setup" required>
+          <option value="">Choose one</option>
+          <option value="ps5">PS5 (original or Slim)</option>
+          <option value="ps5pro">PS5 Pro</option>
+          <option value="xbox">Xbox Series X|S</option>
+          <option value="pc">PC (waiting for the PC version)</option>
+          <option value="undecided">Not sure yet</option>
+        </select>
+      </label>
+      <label id="gpu-wrap" hidden>Your graphics card (optional)
+        <input type="text" id="f-gpu" placeholder="e.g. RTX 3060, RX 6700 XT">
+      </label>
+      <label class="check"><input type="checkbox" id="f-kit">
+        <span>I'd want a <strong>PC Launch Kit</strong>: tested settings for my graphics card and fixes for stutter and crashes, ready on launch day.</span>
+      </label>
+      <input type="hidden" id="f-source">
+      <button type="submit">Notify me</button>
+      <p class="msg" id="not-connected" hidden>Sign-ups aren't switched on yet. Check back soon.</p>
+      <p class="fine">Over 18s only. We email about launches and setup, nothing else, and every email has an unsubscribe link. See our <a href="privacy.html">Privacy Policy</a>.</p>
+    </form>
+  </div>
+
+  <h2>Where things stand</h2>
+  <div class="card">
+    <p class="fine">Last checked 27 November 2026. We only call something confirmed when Rockstar has said it.</p>
+    <table class="status">
+      <tr><td>PS5 &amp; Xbox Series X|S</td><td><span class="tag yes">Confirmed</span>Out since 19 November 2026.</td></tr>
+      <tr><td>PC version</td><td><span class="tag no">No date</span>Rockstar hasn't announced one. <span class="tag rep">Reported</span>Industry sources say early 2027.</td></tr>
+      <tr><td>GTA VI Online</td><td><span class="tag no">No date</span>Rockstar hasn't announced a date or window.</td></tr>
+      <tr><td>Install size (PS5)</td><td><span class="tag rep">Reported</span>About 210 GB, per data-mined store listings. Not an official figure, so check the size your console shows.</td></tr>
+    </table>
+  </div>
+
+  <h2>PS5 full? Free up space or add more</h2>
+  <div class="card">
+    <p><strong>Quick wins first, no cost:</strong></p>
+    <ol>
+      <li>Go to <em>Settings &rarr; Storage &rarr; Console Storage</em> to see what's using space.</li>
+      <li>Delete games you've finished. Your saves live separately and aren't lost.</li>
+      <li>Have a USB drive? Move PS4 games to it, since they can play from there. PS5 games can be <em>stored</em> on USB to save re-downloading, but they have to be on the internal drive or an M.2 drive to play.</li>
+    </ol>
+    <p><strong>Adding an M.2 SSD: what Sony says it needs</strong></p>
+    <ul>
+      <li>PCIe Gen4 x4 M.2 NVMe SSD, 250 GB to 8 TB.</li>
+      <li>Sequential read speed of 5,500 MB/s or faster is recommended.</li>
+      <li>Must have a heatsink or cooling structure (built in, or added separately).</li>
+      <li>Sizes 2230, 2242, 2260, 2280 or 22110 fit.</li>
+    </ul>
+    <p class="fine">Always check Sony's official PS5 M.2 SSD page before buying. Xbox Series X|S uses official Storage Expansion Cards instead; a USB drive can store Series X|S games but not play them.</p>
+
+    <div class="picks" id="picks"></div>
+    <p class="fine" id="picks-empty">We're testing SSD picks at three price points. Join the alert above to get them.</p>
+    <p class="fine" id="aff-note" hidden>Some links above are affiliate links. If you buy through them we may earn a commission at no extra cost to you.</p>
+  </div>
+
+  <h2>Can my PC run GTA VI?</h2>
+  <div class="card">
+    <p><strong>Nobody knows yet.</strong> Rockstar hasn't published PC requirements, so any "system requirements" you see right now are guesses.</p>
+    <p>Pick <strong>PC</strong> in the form above and add your graphics card. The day official specs drop, we'll email you a straight answer for your card: ready, settings to lower, or what to upgrade.</p>
+    <p><a href="#join">Get my answer &rarr;</a></p>
+  </div>
+
+  <h2>Questions</h2>
+  <details><summary>Is this official?</summary>
+    <p>No. Day One Ready and Vice City Daily are independent fan projects. We're not affiliated with, endorsed by or sponsored by Rockstar Games or Take-Two Interactive.</p></details>
+  <details><summary>How often will you email?</summary>
+    <p>Only when something actually happens: a launch date, official specs, a useful deal. Unsubscribe any time with one click.</p></details>
+  <details><summary>What's the PC Launch Kit?</summary>
+    <p>A short guide we're considering: tested settings for each common graphics card and a fix list for stutter and crashes, ready on PC launch day. Tick the box above if you'd want it. It helps us decide whether to make it.</p></details>
+  <details><summary>Do you make money from this?</summary>
+    <p>If we recommend gear, some links may be affiliate links that pay us a small commission at no extra cost to you. We'll always say when a link is one.</p></details>
+
+</main>
+<footer>
+  <p>&copy; 2026 Vice City Daily &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></p>
+  <p>Not affiliated with Rockstar Games or Take-Two Interactive. Game names are trademarks of their owners.</p>
+</footer>
+
+<script>
+/* ===== SETUP: fill these in, nothing else needs editing =====
+   1. Create a free account with an email tool (Buttondown, Kit or Beehiiv).
+   2. Copy the form "action" URL from its embed code into `action`.
+   3. Copy the field names it expects (they're in the same embed code).
+   Until `action` is filled in, the form shows a "not switched on yet" message. */
+const SIGNUP = {
+  action: "",
+  fields: {
+    email: "email",                    // Buttondown: "email"; Kit: "email_address"
+    setup: "metadata__setup",          // Buttondown: "metadata__setup"; Kit: "fields[setup]"
+    gpu: "metadata__gpu",              // Buttondown: "metadata__gpu";   Kit: "fields[gpu]"
+    kit: "metadata__wants_kit",        // Buttondown: "metadata__wants_kit"; Kit: "fields[wants_kit]"
+    source: "metadata__source"         // Buttondown: "metadata__source"; Kit: "fields[source]"
+  }
+};
+
+/* Product picks: add affiliate links here once you've chosen them.
+   Example: { name: "Budget: 1 TB with heatsink", note: "Plenty for GTA VI plus a few more games", url: "https://..." } */
+const PICKS = [];
+
+/* ===== end of setup ===== */
+
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const form = $("signup");
+
+  // Remember where the visitor came from: ready.html?src=tiktok or ?src=yt-short-12
+  const src = new URLSearchParams(location.search).get("src") || (document.referrer ? new URL(document.referrer).hostname : "direct");
+  $("f-source").value = src.slice(0, 60);
+
+  $("f-setup").addEventListener("change", (e) => { $("gpu-wrap").hidden = e.target.value !== "pc"; });
+
+  const map = { "f-email": "email", "f-setup": "setup", "f-gpu": "gpu", "f-kit": "kit", "f-source": "source" };
+  for (const [id, key] of Object.entries(map)) $(id).name = SIGNUP.fields[key];
+  $("f-kit").value = "yes";
+
+  if (SIGNUP.action) {
+    form.action = SIGNUP.action;
+  } else {
+    form.addEventListener("submit", (e) => { e.preventDefault(); $("not-connected").hidden = false; });
+  }
+
+  if (PICKS.length) {
+    const box = $("picks");
+    for (const p of PICKS) {
+      const d = document.createElement("div"); d.className = "pick";
+      const a = document.createElement("a"); a.href = p.url; a.textContent = p.name;
+      a.rel = "sponsored noopener"; a.target = "_blank";
+      const n = document.createElement("div"); n.className = "fine"; n.textContent = p.note || "";
+      d.append(a, n); box.append(d);
+    }
+    $("picks-empty").hidden = true;
+    $("aff-note").hidden = false;
+  }
+})();
+</script>
+</body>
+</html>
